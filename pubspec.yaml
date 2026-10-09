@@ -1,0 +1,140 @@
+name: converterpro
+description: Unit and currencies converter
+publish_to: none
+
+version: 4.6.3+55
+
+environment:
+  sdk: ">=3.11.0 <4.0.0"
+  flutter: ">=3.35.1 <4.0.0"
+
+workspace:
+  - packages/calculator_widget
+  - packages/translations
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Various collection utilities
+  collection: ^1.19.1
+  # App dynamic color theme
+  dynamic_color: ^2.1.0
+  # Required for import/export
+  file_picker: ^13.1.0
+  # State management
+  flutter_riverpod: ^3.4.2
+  # For svg icons
+  flutter_svg: ^2.3.0
+  # In-place reorderable grid
+  flutter_reorderable_grid_view: ^5.7.0
+  # Navigation
+  go_router: ^17.5.0
+  # Rounded corner window on linux
+  handy_window: ^0.4.2
+  # Downloading the exchange rates
+  http: ^1.6.0
+  # Translations
+  intl: ^0.20.3
+  # Material widgets
+  material_ui: ^1.0.0
+  # App version
+  package_info_plus: ^10.2.1
+  # Required for import/export
+  path_provider: ^2.1.6
+  # Android app shortcuts
+  quick_actions: ^1.1.0
+  # Required for import/export
+  share_plus: ^13.3.0
+  # Store the customizations and the latest currencies conversions
+  shared_preferences: ^2.5.5
+  # Unit conversion
+  units_converter: ^3.3.2
+  # Open external pages such as GitHub repo, Play Store, etc
+  url_launcher: ^6.3.2
+  # Load optimized svg icons
+  vector_graphics: ^1.2.3
+  # Resize window during testing
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding
+      ref: eb3964990cf19629c89ff8cb4a37640c7b3d5601
+      path: plugins/window_size
+
+  # Sub packages ---------------------------------------------------------------
+  # Calculator widget and logic
+  calculator_widget:
+    path: packages/calculator_widget
+  # App translations
+  translations:
+    path: packages/translations
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  melos: ^8.3.0
+  msix: ^3.18.0
+  test: ^1.31.1
+
+melos:
+  command:
+    bootstrap:
+      hooks:
+        post: melos run generate_translations && melos run compile_icons && melos run generate_exchange_rates
+  scripts:
+    analyze:
+      run: melos exec -- "flutter analyze"
+      description: Run `flutter analyze` in all packages
+    format:
+      run: melos exec -- "flutter format . --set-exit-if-changed"
+      description: Run `flutter format .` in all packages
+    compile_icons:
+      steps:
+        - dart run vector_graphics_compiler --input-dir assets/app_icons --out-dir assets/app_icons_opti
+        - dart run vector_graphics_compiler --input-dir assets/property_icons --out-dir assets/property_icons_opti
+        - dart run vector_graphics_compiler --input-dir assets/flags --out-dir assets/flags_opti
+      description: Optimizes the svg icons.
+    generate_exchange_rates:
+      run: dart run --verbosity error tools/generate_exchange_rates.dart
+      description: Fetches latest exchange rates from ECB and generates default_exchange_rates.g.dart
+    generate_translations:
+      run: cd packages/translations && flutter gen-l10n
+      description: Generates translation files.
+    test:
+      run: melos exec --dir-exists=test -- "flutter test"
+      description: Run `flutter test` in all packages
+
+msix_config:
+  display_name: Converter NOW
+  publisher_display_name: Damiano Ferrari
+  identity_name: 39826DamianoFerrari.ConverterNOW
+  logo_path: assets\logo.png
+  output_name: converternow-windows
+  publisher: CN=E8FE6044-F04C-422E-AC68-EDA83F6AAFB2
+  capabilities: internetClient
+
+flutter:
+  uses-material-design: true
+  generate: true
+  fonts:
+    - family: JosefinSans
+      fonts:
+        - asset: assets/fonts/JosefinSans-Light.ttf
+          weight: 300
+  assets:
+    - assets/app_icons_opti/
+    - assets/fonts/OFL.txt
+    - assets/property_icons_opti/
+    - assets/flags_opti/
+    - assets/flags/br.png
+    - assets/flags/eu.png
+    - assets/flags/in.png
+    - assets/flags/mx.png
+    - assets/flags/nz.png
+    - assets/flags/us.png
+    - path: assets/logo.png
+      platforms: [windows]

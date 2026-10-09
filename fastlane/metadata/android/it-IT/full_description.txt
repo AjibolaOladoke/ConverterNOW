@@ -1,0 +1,34 @@
+<b>Converter NOW è un efficace convertitore di unità di misura e di valute made in Italy</b>
+✔️ <b>Semplifica</b> il noioso processo di conversione tra unità di misura in qualche click
+🚀 È <b>veloce e immediato</b>: basta cominciare a digitare e subito si ha la conversione in real-time con tutte le altre unità di misura
+🖌️ È <b>personalizzabile</b>: le unità di misura posso essere riorganizzate secondo le proprie priorità e il proprio utilizzo
+🔢 Ha una <b>calcolatrice</b> integrata che permette di eseguire velocemente i calcoli in ogni schermata
+💰 Tassi di cambio <b>aggiornati quotidianamente</b>
+🎨 <b>Tema dinamico</b> in base alle impostazioni del tuo dispositivo
+⚫⚪ <b>Scegli il tuo tema preferito</b>: tema chiaro e scuro
+📱🖥️ <b>Multipiattaforma</b>: disponibile per Android, Web, Linux e Windows
+💯 È <b>gratuito, senza annuni, non raccogliamo dati, non richiede permessi</b> (solo internet per aggiornare i tassi di cambio) e soprattutto è <b>open source</b>!
+
+<b>Converter NOW può convertire 200+ unità di misura e 30+ valute</b> 🎉🎉
+
+Ecco alcune delle grandezze che Converter NOW è in grado di convertire:
+-<b>Valute:</b> Dollari, Euro, Sterline, Rupie, Yen, ecc
+-<b>Lunghezza:</b> metri, pollici, miglia, yard, anni luce, ecc
+-<b>Superficie:</b> metri quadrati, ettari, acri, ecc
+-<b>Volume:</b> metri cubi, litri, galloni, pinte, cucchiai, ecc
+-<b>Tempo:</b> secondi, ore, giorni, anni, settimane, millenni, ecc
+-<b>Temperatura:</b> Centigradi, Fahreneit, Kelvin
+-<b>Velocità:</b> metri al secondo, chilometri orari, nodi, ecc
+-<b>Massa:</b> grammi, libbre, tonnellate, unità di massa atomica, ecc
+-<b>Forza:</b> Newton, dyne, libbre-forza, poundal, ecc
+-<b>Pressione:</b> pascal, bar, atomsfere, psi, ecc
+-<b>Energia:</b> Joule, calorie, kilowattora, ecc
+-<b>Potenza:</b> Watt, kilowatt, cavalli vapore, ecc
+-<b>Densità:</b>: Grammi per metro cubo, ecc.</li>
+-<b>Consumo carburante:</b> Chilometri con un litro, litro ogni 100 km, ecc
+-<b>Basi numeriche:</b> decimale, binario, esadecimale, ecc.
+-<b>Momento:</b> Newton metro, libbre-forza piede, poundal metro, ecc
+-<b>Dati digitali:</b> Nibble, bit, byte, kibibit, kibibyte, ecc
+-<b>Taglia scarpe:</b> UK, India, Europa, USA, Giappone, ecc
+-<b>Angoli:</b> gradi, primi, radianti, ecc
+-<b>Prefissi SI:</b> kilo, mega, giga,tera, milli, micro, nano, ecc

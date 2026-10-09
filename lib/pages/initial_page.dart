@@ -1,0 +1,56 @@
+import 'package:converterpro/app_router.dart';
+import 'package:converterpro/models/order.dart';
+import 'package:converterpro/utils/utils.dart';
+import 'package:converterpro/utils/utils_widgets.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:translations/app_localizations.dart';
+import 'package:vector_graphics/vector_graphics.dart';
+
+class InitialPage extends ConsumerWidget {
+  const InitialPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar.large(
+            title: Row(
+              spacing: 16,
+              children: [
+                const SvgPicture(
+                  AssetBytesLoader('assets/app_icons_opti/logo.svg.vec'),
+                  width: 39,
+                  height: 39,
+                ),
+                Text(AppLocalizations.of(context)!.appName),
+              ],
+            ),
+          ),
+          SliverGrid.extent(
+            maxCrossAxisExtent: 180,
+            children: getPropertyGridTiles(
+              (PROPERTYX e) {
+                final heroNotifier =
+                    ref.read(conversionPageHeroEnabledProvider.notifier);
+                Future.delayed(const Duration(milliseconds: 300), () {
+                  if (heroNotifier.mounted) {
+                    heroNotifier.state = false;
+                  }
+                });
+                HapticFeedback.selectionClick();
+                context.go('/conversions/${e.toKebabCase()}');
+              },
+              context,
+              ref.read(PropertiesOrderNotifier.provider).value!,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

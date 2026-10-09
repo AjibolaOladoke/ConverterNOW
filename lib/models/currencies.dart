@@ -1,0 +1,147 @@
+import 'dart:convert';
+import 'package:converterpro/models/default_exchange_rates.g.dart'
+    as generated;
+import 'package:converterpro/models/settings.dart';
+import 'package:converterpro/utils/utils.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+class Currencies {
+  static const defaultExchangeRates = generated.defaultExchangeRates;
+
+  /// The conversion rates with respect to EUR
+  Map<String, double> exchangeRates;
+
+  /// The date of the last update encoded as 'yyyy-mm-dd'
+  String lastUpdate;
+
+  /// The exception thrown by the last download attempt, if it failed.
+  /// Null if the last update was successful.
+  Object? downloadError;
+
+  Currencies({
+    this.exchangeRates = generated.defaultExchangeRates,
+    this.lastUpdate = generated.defaultExchangeRatesDate,
+    this.downloadError,
+  });
+
+  /// Transform the exchangeRates map into a json that can be stored
+  String toJson() => jsonEncode(exchangeRates);
+
+  /// It transforms a previous stored data (with the toJson method) into this
+  /// object
+  factory Currencies.fromJson(String jsonString) {
+    final exchangeRates = Map<String, double>.from(defaultExchangeRates);
+    Map jsonData = json.decode(jsonString);
+    for (String key in jsonData.keys) {
+      exchangeRates[key] = jsonData[key];
+    }
+    return Currencies(exchangeRates: exchangeRates);
+  }
+
+  Currencies copyWith({
+    Map<String, double>? exchangeRates,
+    String? lastUpdate,
+    Object? downloadError,
+  }) {
+    return Currencies(
+      exchangeRates: exchangeRates ?? this.exchangeRates,
+      lastUpdate: lastUpdate ?? this.lastUpdate,
+      downloadError: downloadError,
+    );
+  }
+}
+
+class CurrenciesNotifier extends AsyncNotifier<Currencies> {
+  static final provider = AsyncNotifierProvider<CurrenciesNotifier, Currencies>(
+    CurrenciesNotifier.new,
+  );
+  late SharedPreferencesWithCache pref;
+
+  @override
+  Future<Currencies> build() async {
+    pref = await ref.read(sharedPref.future);
+
+    final String now = DateFormat("yyyy-MM-dd").format(DateTime.now());
+    // Let's search before if we already have downloaded the exchange rates
+    String? lastUpdate = pref.getString("lastUpdateCurrencies");
+    // if I have never updated the conversions or if I have updated before today
+    // I have to update
+    if (!(ref.read(revokeInternetProvider).value ?? false) &&
+        (lastUpdate == null || lastUpdate != now)) {
+      return _downloadCurrencies();
+    }
+    // If I already have the data of today I just use it, no need of read them
+    // from the web
+    return _readSavedCurrencies();
+  }
+
+  Future<void> forceCurrenciesDownload() async {
+    state = AsyncData(await _downloadCurrencies());
+  }
+
+  Currencies _readSavedCurrencies() {
+    String? lastUpdate = pref.getString('lastUpdateCurrencies');
+    String? currenciesRead = pref.getString('currenciesRates');
+    if (currenciesRead != null) {
+      return Currencies.fromJson(
+        currenciesRead,
+      ).copyWith(lastUpdate: lastUpdate);
+    }
+    return Currencies();
+  }
+
+  /// Updates the exchange rates with the latest values. If the download fails
+  /// it is retried once after a second. If both attempts fail, the saved data
+  /// (if any) is returned together with the error that caused the failure.
+  Future<Currencies> _downloadCurrencies() async {
+    final stringRequest = Currencies.defaultExchangeRates.keys
+        .where((e) => e != 'EUR')
+        .join('+');
+    Object? error;
+    for (var attempt = 0; attempt < 2; attempt++) {
+      if (attempt > 0) {
+        await Future<void>.delayed(const Duration(seconds: 1));
+      }
+      try {
+        final response = await http.get(
+          Uri.https(
+            'data-api.ecb.europa.eu',
+            'service/data/EXR/D.$stringRequest.EUR.SP00.A',
+            {'lastNObservations': '1', 'detail': 'dataonly', 'format': 'csvdata'},
+          ),
+        ).timeout(const Duration(seconds: 10));
+
+        // if successful
+        if (response.statusCode == 200) {
+          var lastUpdate = DateFormat("yyyy-MM-dd").format(DateTime.now());
+          Map<String, double> exchangeRates = {'EUR': 1};
+          final rows = const LineSplitter().convert(response.body);
+          final tableHeader = rows[0].split(',');
+          final valueIndex = tableHeader.indexOf('OBS_VALUE');
+          final currencyIndex = tableHeader.indexOf('CURRENCY');
+          rows.removeAt(0);
+          for (var row in rows) {
+            final elements = row.split(',');
+            final currency = elements[currencyIndex];
+            final value = double.parse(elements[valueIndex]);
+            exchangeRates[currency] = value;
+          }
+          pref.setString('currenciesRates', jsonEncode(exchangeRates));
+          pref.setString('lastUpdateCurrencies', lastUpdate);
+          return Currencies(
+            exchangeRates: exchangeRates,
+            lastUpdate: lastUpdate,
+          );
+        }
+        throw Exception('HTTP status ${response.statusCode}');
+      } catch (e) {
+        dPrint(e.toString);
+        error = e;
+      }
+    }
+    return _readSavedCurrencies().copyWith(downloadError: error);
+  }
+}

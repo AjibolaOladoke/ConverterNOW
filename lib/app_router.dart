@@ -1,0 +1,113 @@
+import 'package:converterpro/models/conversions.dart';
+import 'package:converterpro/models/hide_units.dart';
+import 'package:converterpro/models/order.dart';
+import 'package:converterpro/models/properties_list.dart';
+import 'package:converterpro/models/settings.dart';
+import 'package:converterpro/pages/conversion_page.dart';
+import 'package:converterpro/pages/error_page.dart';
+import 'package:converterpro/pages/initial_page.dart';
+import 'package:converterpro/pages/reorder_properties_page.dart';
+import 'package:converterpro/pages/settings_page.dart';
+import 'package:converterpro/pages/splash_screen.dart';
+import 'package:converterpro/pages/app_scaffold.dart';
+import 'package:converterpro/utils/utils.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:translations/app_localizations.dart';
+import 'package:vector_graphics/vector_graphics.dart';
+
+final isEverythingLoadedProvider = Provider<bool>(
+  (ref) =>
+      ref.watch(significantFiguresProvider).hasValue &&
+      ref.watch(removeTrailingZerosProvider).hasValue &&
+      ref.watch(isPureDarkProvider).hasValue &&
+      ref.watch(propertySelectionOnStartupProvider).hasValue &&
+      ref.watch(useDeviceColorProvider).hasValue &&
+      ref.watch(colorThemeProvider).hasValue &&
+      ref.watch(revokeInternetProvider).hasValue &&
+      ref.watch(themeModeProvider).hasValue &&
+      ref.watch(languageTagProvider).hasValue &&
+      ref.watch(PropertiesOrderNotifier.provider).hasValue &&
+      ref.watch(UnitsOrderNotifier.provider).hasValue &&
+      ref.watch(ConversionsNotifier.provider).hasValue &&
+      ref.watch(HiddenUnitsNotifier.provider).hasValue &&
+      ref.watch(propertiesMapProvider).hasValue,
+);
+
+final conversionPageHeroEnabledProvider = StateProvider<bool>((ref) => false);
+
+final routerProvider = Provider<GoRouter>(
+  (ref) => GoRouter(
+    routes: [
+      GoRoute(path: '/', builder: (context, _) => const SplashScreen()),
+      GoRoute(
+        path: '/conversions',
+        name: 'conversions',
+        builder: (context, state) => const InitialPage(),
+        redirect: (context, state) {
+          ref.read(conversionPageHeroEnabledProvider.notifier).state = true;
+          return null;
+        },
+      ),
+      ShellRoute(
+        builder: (context, state, child) => AppScaffold(child: child),
+        routes: [
+          GoRoute(
+            path: '/conversions/:property',
+            builder: (context, state) {
+              final String property = state.pathParameters['property']!;
+              final propertyx = kebabStringToPropertyX(property);
+              return ConversionPage(propertyx);
+            },
+          ),
+          GoRoute(
+            path: '/settings',
+            name: 'settings',
+            builder: (context, state) => const SettingsPage(),
+            routes: [
+              GoRoute(
+                path: 'reorder-properties',
+                name: 'reorder-properties',
+                builder: (context, state) => const ReorderPropertiesPage(),
+              ),
+              GoRoute(
+                path: 'about',
+                name: 'about',
+                builder: (context, state) => FutureBuilder<PackageInfo>(
+                  future: PackageInfo.fromPlatform(),
+                  builder: (context, snapshot) => LicensePage(
+                    applicationName: AppLocalizations.of(context)!.appName,
+                    applicationVersion: snapshot.hasData
+                        ? snapshot.data!.version
+                        : '',
+                    applicationIcon: const SvgPicture(
+                      AssetBytesLoader('assets/app_icons_opti/logo.svg.vec'),
+                      width: 54,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ],
+    redirect: (context, state) {
+      // Bypass splashscreen if variables are already loaded
+      if (state.uri.toString() == '/') {
+        if (ref.read(isEverythingLoadedProvider)) {
+          final conversionsOrderDrawer = ref
+              .read(PropertiesOrderNotifier.provider)
+              .value!;
+          return '/conversions/${conversionsOrderDrawer[0].toKebabCase()}';
+        }
+      }
+      return null;
+    },
+    errorBuilder: (context, state) => const ErrorPage(),
+  ),
+);

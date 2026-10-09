@@ -1,0 +1,651 @@
+{
+  "@@locale": "id",
+
+  "appName": "Converter NOW",
+  "reorder": "Tata ulang",
+  "myOrdering": "Penataan saya",
+  "about": "Tentang",
+  "lastCurrenciesUpdate": "Terakhir diperbarui: ",
+  "today": "Hari ini",
+  "enableDarkTheme": "Aktifkan tema gelap",
+  "settings": "Pengaturan",
+  "menu": "Menu",
+  "donation": "Donasi",
+  "buyMeACoffee": "Belikan saya sebuah kopi",
+  "donationDialog": "Hi, seperti yang anda tahu, aplikasi ini gratis/bebas dan sumber terbuka. Itu berarti anda bisa menggunakan aplikasi ini secara gratis/bebas dan menyalin/edit kode sumbernya. Sang pengembang tidak akan mendapatkan apa pun dari itu. Tapi, jika anda mau melihat fitur baru, mohon untuk mempertimbangkan membelikan saya sebuah kopi.",
+  "drawerLogo": "Logo pada menu",
+  "rateApp": "Ulas aplikasi",
+  "repoGithub": "Buka repo di GitHub",
+  "contributeTranslating": "Berkontribusi menerjemahkan aplikasi",
+  "search": "Cari",
+  "clearAll": "Bersihkan semua",
+  "calculator": "Kalkulator",
+  "significantFigures": "Angka penting",
+  "removeTrailingZeros": "Hapus angka nol pengikut",
+  "longPressAdvice": "Tekan lama untuk memindahkan komponen",
+  "back": "Kembali",
+  "save": "Simpan",
+  "invalidCharacters": "Galat, karakter tidak valid",
+  "theme": "Tema",
+  "dark": "Gelap",
+  "light": "Terang",
+  "system": "Sistem",
+  "pureBlackTheme": "Tema gelap AMOLED",
+  "@pureBlackTheme": {
+    "description": "Revise this translation"
+  },
+  "propertySelectionOnStartup": "Property selection on startup",
+  "@propertySelectionOnStartup": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "propertySelectionOnStartupSubtitle": "Show the property selection page on startup on small screen devices",
+  "@propertySelectionOnStartupSubtitle": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "copy": "Salin",
+  "paste": "Paste",
+  "@paste": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "more": "Lebih banyak",
+  "language": "Bahasa",
+  "reorderProperties": "Tata ulang properti",
+  "reorderUnits": "Tata ulang satuan",
+  "chooseProperty": "Pilih sebuah properti",
+  "reorderProperty": "Tata ulang {property}",
+  "@reorderProperty": {
+    "placeholders": {
+      "property": {
+        "type": "String",
+        "example": "Length"
+      }
+    }
+  },
+  "otherPlatforms": "Converter NOW untuk sistem operasi lain",
+  "sourceCode": "Kode sumber",
+  "undoClearAllMessage": "Dihapus semua. Apakah anda ingin mengurungkannya?",
+  "undo": "Urung",
+  "routeError1": "Halaman ini tidak ada",
+  "routeError2": "Kembali ke beranda",
+  "ok": "Ok",
+  "@ok": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "revokeInternetAccess": "Revoke internet access",
+  "@revokeInternetAccess": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "revokeInternetExplanation": "This app uses the internet to update currency exchange rates once a day upon opening. This download only requires a few kilobytes. However, if you don't need this feature, you can prevent the app from accessing the internet by enabling this option.",
+  "@revokeInternetExplanation": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "useDeviceColor": "Use device color",
+  "@useDeviceColor": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "pickColor": "Pick a color",
+  "@pickColor": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "themeColor": "Theme color",
+  "@themeColor": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "appearance": "Appearance",
+  "@appearance": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "conversions": "Conversions",
+  "@conversions": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "findOutMore": "Find out more",
+  "@findOutMore": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "hideUnit": "Sembunyikan unit",
+  "hideUnits": "Hide units",
+  "showUnit": "Tampilkan unit",
+  "@hideUnits": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "visibleUnits": "{property}, visible units",
+  "@visibleUnits": {
+    "description": "Not yet translated. Once done, remove this comment",
+    "placeholders": {
+      "property": {
+        "type": "String",
+        "example": "Length"
+      }
+    }
+  },
+  "hiddenUnits": "Hidden units",
+  "@hiddenUnits": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "selectAll": "Select all",
+  "@selectAll": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "unselectAll": "Unselect all",
+  "@unselectAll": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "backupAndRestore": "Backup & restore",
+  "@backupAndRestore": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "exportSettings": "Export settings",
+  "@exportSettings": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "importSettings": "Import settings",
+  "@importSettings": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "clearSettings": "Clear all settings",
+  "@clearSettings": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "exportSuccess": "Settings exported successfully",
+  "@exportSuccess": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "importSuccess": "Settings imported successfully",
+  "@importSuccess": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "problemImportFile": "There was a problem importing the file",
+  "@problemImportFile": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "relatedSettings": "Related settings",
+  "@relatedSettings": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "reason": "Reason",
+  "@reason": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "importError": "Import error",
+  "@importError": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "confirmationClear": "Are you sure you want to clear all settings? This action cannot be undone.",
+  "@confirmationClear": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "length": "Panjang",
+  "area": "Luas",
+  "volume": "Volume",
+  "time": "Waktu",
+  "temperature": "Temperatur",
+  "speed": "Kecepatan",
+  "siPrefixes": "Awalan SI",
+  "mass": "Massa",
+  "pressure": "Tekanan",
+  "energy": "Energi",
+  "angles": "Sudut",
+  "currencies": "Kurs",
+  "shoeSize": "Ukuran sepatu",
+  "digitalData": "Data digital",
+  "power": "Daya",
+  "density": "Density",
+  "@density": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "torque": "Torsi",
+  "force": "Gaya",
+  "fuelConsumption": "Konsumsi bahan bakar",
+  "numeralSystems": "Sistem numeral",
+
+  "meters": "Meter",
+  "centimeters": "Sentimeter",
+  "inches": "Inci",
+  "feet": "Kaki",
+  "nauticalMiles": "Mil laut",
+  "yards": "Yard",
+  "miles": "Mil",
+  "millimeters": "Milimeter",
+  "micrometers": "Mikrometer",
+  "nanometers": "Nanometer",
+  "angstroms": "Ångström",
+  "picometers": "Pikometer",
+  "kilometers": "Kilometer",
+  "astronomicalUnits": "Satuan astronomi",
+  "lightYears": "Tahun cahaya",
+  "parsec": "Parsek",
+  "mils": "Seperseribu inci (mil/thou)",
+  "feetUsSurvey": "Kaki (survei AS)",
+
+  "squareMeters": "Meter persegi",
+  "squareCentimeters": "Sentimeter persegi",
+  "squareInches": "Inci persegi",
+  "squareFeet": "Kaki persegi",
+  "squareMiles": "Mil persegi",
+  "squareYard": "Yard persegi",
+  "squareMillimeters": "Milimeter persegi",
+  "squareKilometers": "Kilometer persegi",
+  "hectares": "Hektare",
+  "acres": "Ekar",
+  "are": "Are",
+  "squareFeetUsSurvey": "Square feet (US survey)",
+  "@squareFeetUsSurvey": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "gramsPerCubicCentimeter": "Grams per cubic centimeter",
+  "@gramsPerCubicCentimeter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "gramsPerLiter": "Grams per liter",
+  "@gramsPerLiter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "gramsPerMilliliter": "Grams per milliliter",
+  "@gramsPerMilliliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "gramsPerDeciliter": "Grams per deciliter",
+  "@gramsPerDeciliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "kilogramsPerLiter": "Kilograms per liter",
+  "@kilogramsPerLiter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "kilogramsPerCubicMeter": "Kilograms per cubic meter",
+  "@kilogramsPerCubicMeter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "milligramsPerLiter": "Milligrams per liter",
+  "@milligramsPerLiter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "milligramsPerDeciliter": "Milligrams per deciliter",
+  "@milligramsPerDeciliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "milligramsPerMilliliter": "Milligrams per milliliter",
+  "@milligramsPerMilliliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "milligramsPerCubicMeter": "Milligrams per cubic meter",
+  "@milligramsPerCubicMeter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "milligramsPerCubicCentimeter": "Milligrams per cubic centimeter",
+  "@milligramsPerCubicCentimeter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "microgramsPerLiter": "Micrograms per liter",
+  "@microgramsPerLiter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "microgramsPerDeciliter": "Micrograms per deciliter",
+  "@microgramsPerDeciliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "microgramsPerMilliliter": "Micrograms per milliliter",
+  "@microgramsPerMilliliter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "poundsPerCubicInches": "Pounds per cubic inches",
+  "@poundsPerCubicInches": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "poundsPerCubicFeet": "Pounds per cubic feet",
+  "@poundsPerCubicFeet": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "cubicMeters": "Meter kubik",
+  "liters": "Liter",
+  "imperialGallons": "Galon imperial",
+  "usGallons": "Galon AS",
+  "imperialPints": "Pint imperial",
+  "usPints": "Pint AS",
+  "milliliters": "Mililiter",
+  "tablespoonUs": "Sendok makan AS",
+  "tablespoonAustralian": "Sendok makan Australia",
+  "cups": "Gelas",
+  "metricCup": "Metric cup",
+  "@metricCup": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "britishCup": "British cup",
+  "@britishCup": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "usBarrel": "US barrel",
+  "@usBarrel": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "cubicYard": "Cubic yard",
+  "@cubicYard": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "cubicCentimeters": "Sentimeter kubik",
+  "cubicFeet": "Kaki kubik",
+  "cubicInches": "Inci kubik",
+  "cubicMillimeters": "Milimeter kubik",
+  "imperialFluidOunces": "Ons cairan imperial",
+  "usFluidOunces": "Ons cairan AS",
+  "imperialGill": "Gil imperial",
+  "usGill": "Gil AS",
+  "usQuarts": "US quarts",
+  "@usQuarts": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "microliters": "Microliters",
+  "@microliters": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "deciliters": "Deciliters",
+  "@deciliters": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "centiliters": "Centiliters",
+  "@centiliters": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "teaspoonsUs": "Teaspoons US",
+  "@teaspoonsUs": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "teaspoonsMetric": "Metric teaspoons",
+  "@teaspoonsMetric": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "seconds": "Detik",
+  "deciseconds": "Desidetik",
+  "centiseconds": "Sentidetik",
+  "milliseconds": "Milidetik",
+  "microseconds": "Mikrodetik",
+  "nanoseconds": "Nanodetik",
+  "minutes": "Menit",
+  "hours": "Jam",
+  "days": "Hari",
+  "weeks": "Pekan",
+  "years": "Tahun (365)",
+  "averageMonth": "Average month",
+  "@averageMonth": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "lustrum": "Lustrum",
+  "decades": "Dasawarsa",
+  "centuries": "Abad",
+  "millennium": "Milenium",
+
+  "fahrenheit": "Fahrenheit",
+  "celsius": "Celsius (centigrade)",
+  "kelvin": "Kelvin",
+  "reamur": "Reamur",
+  "romer": "Rømer",
+  "delisle": "Delisle",
+  "rankine": "Rankine",
+
+  "metersSecond": "Meter per detik",
+  "kilometersHour": "Kilometer per jam",
+  "milesHour": "Mil per jam",
+  "knots": "Knot",
+  "feetSecond": "Kaki per detik",
+  "minutesPerKilometer": "Menit per kilometer",
+  "minutesPerMile": "Minutes per mile",
+  "@minutesPerMile": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "speedOfLight": "Speed of light",
+  "speedOfSound": "Speed of sound",
+  "@speedOfSound": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "@speedOfLight": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "grams": "Gram",
+  "ettograms": "Ettogram",
+  "kilograms": "Kilogram",
+  "pounds": "Pon",
+  "ounces": "Ons",
+  "quintals": "Kuintal",
+  "tonnes": "Ton",
+  "milligrams": "Miligram",
+  "uma": "Satuan massa atom terpadu",
+  "carats": "Karat",
+  "centigrams": "Sentigram",
+  "pennyweights": "Kelas penny",
+  "troyOunces": "Ons troy",
+  "stones": "Batu",
+  "shortTon": "Short ton",
+  "@shortTon": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "longTon": "Long ton",
+  "@longTon": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "pascal": "Pascal",
+  "atmosphere": "Atmosfer",
+  "bar": "Bar",
+  "millibar": "Milibar",
+  "psi": "Pon per inci persegi",
+  "torr": "Torr",
+  "hectoPascal": "Hektopascal",
+  "inchesOfMercury": "Inci merkurium",
+  "kiloPascal": "Kilopascal",
+  "@kiloPascal": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "ksi": "Kilopounds per square inch",
+  "@ksi": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "megaPascal": "Megapascal",
+  "@megaPascal": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "gigaPascal": "Gigapascal",
+  "@gigaPascal": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "joule": "Joule",
+  "calories": "Kalori",
+  "kilowattHour": "Kilowattjam",
+  "electronvolt": "Elektron volt",
+  "footPound": "Pon kaki",
+  "kilocalories": "Kilokalori",
+  "kilojoules": "Kilojoules",
+  "@kilojoules": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "watthour": "Watt hour",
+  "@watthour": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+  "britishThermalUnit": "British thermal unit",
+  "@britishThermalUnit": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "degree": "Derajat",
+  "minutesDegree": "Menit",
+  "secondsDegree": "Detik",
+  "radiansDegree": "Radian",
+
+  "usd": "Dolar amerika",
+  "eur": "Euro",
+  "gbp": "Pound britania",
+  "inr": "Rupee India",
+  "cny": "Yuan China",
+  "jpy": "Yen jepang",
+  "chf": "Franc swiss",
+  "sek": "Krona swedia",
+  "rub": "Rubel rusia",
+  "cad": "Dolar Kanada",
+  "krw": "Won korea selatan",
+  "brl": "Real brasil",
+  "hkd": "Dolar Hong Kong",
+  "aud": "Dolar Australia",
+  "nzd": "Dolar selandia baru",
+  "mxn": "Peso meksiko",
+  "sgd": "Dolar singapura",
+  "nok": "Krona norwegia",
+  "trY": "Lira turki",
+  "zar": "Rand afrika selatan",
+  "dkk": "Krona denmark",
+  "pln": "Złoty polandia",
+  "thb": "Baht thailand",
+  "myr": "Ringgit malaysia",
+  "huf": "Forint hongaria",
+  "czk": "Koruna ceko",
+  "ils": "Shekel israel",
+  "idr": "Rupiah indonesia",
+  "php": "Peso filipina",
+  "ron": "Leu rumania",
+  "isk": "Króna islandia",
+  "twd": "Dolar baru taiwan",
+  "mad": "Dirham maroko",
+
+  "euChina": "Eropa dan Cina",
+  "ukIndiaChild": "Britania dan India - anak",
+  "ukIndiaMan": "Britania dan India - laki-laki",
+  "ukIndiaWoman": "Britania dan India - perempuan",
+  "usaCanadaChild": "AS dan Kanada - anak",
+  "usaCanadaMan": "AS dan Kanada - laki-laki",
+  "usaCanadaWoman": "AS dan Kanada - perempuan",
+  "japan": "Jepang",
+
+  "watt": "Watt",
+  "milliwatt": "Milliwatt",
+  "kilowatt": "Kilowatt",
+  "megawatt": "Megawatt",
+  "gigawatt": "Gigawatt",
+  "europeanHorsePower": "Tenaga kuda eropa",
+  "imperialHorsePower": "Tenaga kuda imperial",
+
+  "newton": "Newton",
+  "dyne": "Dyne",
+  "poundForce": "Pon-gaya",
+  "kilogramForce": "Kilogram-gaya",
+  "poundal": "Pondal",
+
+  "newtonMeter": "Newton meter",
+  "dyneMeter": "Dyne meter",
+  "poundForceFeet": "Pon-gaya kaki",
+  "kilogramForceMeter": "Kilogram-gaya meter",
+  "poundalMeter": "Pondal meter",
+  "poundForceInch": "Pound-force inch",
+  "@poundForceInch": {
+    "description": "Not yet translated. Once done, remove this comment."
+  },
+
+  "kilometersLiter": "Kilometer per liter",
+  "liters100km": "Liter per 100 km",
+  "milesUsGallon": "Mil per galon AS",
+  "milesImperialGallon": "Mil per galon imperial",
+  "milesPerLiter": "Miles per liter",
+  "@milesPerLiter": {
+    "description": "Not yet translated. Once done, remove this comment"
+  },
+
+  "decimal": "Desimal",
+  "hexadecimal": "Heksadesimal",
+  "octal": "Oktal",
+  "binary": "Biner",
+
+  "bit": "Bit",
+  "nibble": "Nibel",
+  "kilobit": "Kilobit",
+  "@kilobit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "megabit": "Megabit",
+  "@megabit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "gigabit": "Gigabit",
+  "@gigabit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "terabit": "Terabit",
+  "@terabit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "petabit": "Petabit",
+  "@petabit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "exabit": "Eksabit",
+  "@exabit": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "kibibit": "Kibibit",
+  "mebibit": "Mebibit",
+  "gibibit": "Gibibit",
+  "tebibit": "Tebibit",
+  "pebibit": "Pebibit",
+  "exbibit": "Eksbibit",
+  "byte": "Bita",
+  "kilobyte": "Kilobita",
+  "@kilobyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "megabyte": "Megabita",
+  "@megabyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "gigabyte": "Gigabita",
+  "@gigabyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "terabyte": "Terabita",
+  "@terabyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "petabyte": "Petabita",
+  "@petabyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "exabyte": "Eksabita",
+  "@exabyte": {
+    "description": "Revise this translation to also include the 'decimal' part"
+  },
+  "kibibyte": "Kibibita",
+  "mebibyte": "Mebibita",
+  "gibibyte": "Gibibita",
+  "tebibyte": "Tebibita",
+  "pebibyte": "Pebibita",
+  "exbibyte": "Eksbibita",
+
+  "base": "Dasar",
+  "deca": "Deka-",
+  "hecto": "Hekto-",
+  "kilo": "Kilo-",
+  "mega": "Mega-",
+  "giga": "Giga-",
+  "tera": "Tera-",
+  "peta": "Peta-",
+  "exa": "Eksa-",
+  "zetta": "Zeta-",
+  "yotta": "Yota-",
+  "deci": "Desi-",
+  "centi": "Senti-",
+  "milli": "Mili-",
+  "micro": "Mikro-",
+  "nano": "Nano-",
+  "pico": "Piko-",
+  "femto": "Femto-",
+  "atto": "Ato-",
+  "zepto": "Zepto-",
+  "yocto": "Yokto-"
+}
