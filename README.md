@@ -145,3 +145,11 @@ Compiled and maintained from upstream [ferraridamiano/ConverterNOW](https://gith
 ---
 
 Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
+
+## Sources
+
+Compiled and maintained from upstream [ferraridamiano/ConverterNOW](https://github.com/ferraridamiano/ConverterNOW) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
