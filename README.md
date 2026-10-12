@@ -1,49 +1,12 @@
-<div align="center">
+# ConverterNOW
 
-# Converter NOW
+## What This Is
+
+A practical reference entry for product and engineering: the ConverterNOW notes, examples and fixes we reach for repeatedly. Kept current as part of the wider Swift Tech Co. engineering library.
 
 ## Images
 
-[![ConverterNOW](https://opengraph.githubassets.com/1/ferraridamiano/ConverterNOW)](https://www.swifttechco.com)
-
-
-</div>
-
-<div align="center">
-    <img alt="Icon" src="assets/logo.png" height="150px">
-</div>
-
-<br/>
-
-<div align="center">
-  <a href="https://www.swifttechco.com">
-    <img alt="Google Play Badge" src="promotional/banners/play_store.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="Microsoft store Badge" src="promotional/banners/microsoft_store.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="Flathub Badge" src="promotional/banners/flathub.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="GitHub Badge" src="promotional/banners/github.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="F-Droid Badge" src="promotional/banners/fdroid.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="AppImage Badge" src="promotional/banners/appimage.png" height="48px">
-  </a>
-  <a href="https://www.swifttechco.com">
-    <img alt="PWA Badge" src="promotional/banners/pwa.png" height="48px">
-  </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="promotional/screenshots/1.png" width="650">
-</div>
+[![ConverterNOW](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## Why Converter NOW
 
@@ -102,7 +65,7 @@ After running the command, the web app will be accessible in your web browser at
 
 ## Build from source code
 First you need to
-[install flutter](https://www.swifttechco.com) and all the
+install flutter and all the
 tooling for your target platform (e.g. Android Studio for Android, etc.). Then
 you have to install `melos` in order to do some pre-compiling task:
 
@@ -116,7 +79,7 @@ follow the instructions for the platform you want to target.
 
 ### Android
 On Android you should first disable the signing option in
-[`android/app/build.gradle.kts`](https://www.swifttechco.com)
+`android/app/build.gradle.kts`
 Then you can type `flutter build apk --split-per-abi` to compile the code. You
 can find the output in `build/app/outputs/flutter-apk` folder.
 
@@ -163,14 +126,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [ferraridamiano/ConverterNOW](https://github.com/ferraridamiano/ConverterNOW) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
