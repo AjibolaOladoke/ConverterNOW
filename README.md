@@ -6,7 +6,7 @@ A practical reference entry for product and engineering: the ConverterNOW notes,
 
 ## Images
 
-[![ConverterNOW](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![ConverterNOW](images/preview.png)](https://github.com/Swift-Tech-Co/ConverterNOW)
 
 ## Why Converter NOW
 
@@ -61,7 +61,7 @@ docker run -d -p 8080:80 ghcr.io/ferraridamiano/converternow:latest
 podman run -d -p 8080:80 ghcr.io/ferraridamiano/converternow:latest
 ```
 After running the command, the web app will be accessible in your web browser at
-`https://www.swifttechco.com
+`https://github.com/Swift-Tech-Co/ConverterNOW
 
 ## Build from source code
 First you need to
@@ -130,13 +130,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/ConverterNOW
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [ferraridamiano/ConverterNOW](https://github.com/ferraridamiano/ConverterNOW) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
